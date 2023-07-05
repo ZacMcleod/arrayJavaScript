@@ -225,12 +225,45 @@ console.log(`idServingsFood from problemFour's filter: `, idServingsFood)
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
 
+function problemFive(){
+    let results;
+    results = dishes.filter(function(el){
+        console.log("el inside problemFive's filter: ", el)
+        if(el.servings % 2 == 0){
+            return true;
+        }
+        else{
+            return false;
+        }})
+
+    return results;
+}
+
+let servingsEvenFood = problemFive();
+console.log(`servingsEvenFood from problemFive's filter: `, servingsEvenFood)
 
 
 //6. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Double Hint: Research 'javascript does array include item'
 //Filter
+
+function problemSix(){
+    let results;
+    results = dishes.filter(function(el){
+        console.log("el inside problemSix's filter: ", el)
+        if(el.ingredients.includes("chickpea")){
+            return true;
+        }
+        else{
+            return false;
+        }})
+
+    return results;
+}
+
+let chickpeaFood = problemSix();
+console.log(`chickpeaFood from problemSix's filter: `, chickpeaFood)
 
 
 
